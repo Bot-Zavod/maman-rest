@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-www.coloniaverdenyc.com	TRUE	/	FALSE	1999999999	csrftoken	6z1BnSP4nbT1koeTNCWW6dsxC2Gix6AOmt1IrAIGiKEkwF63mAExnRIxzq6rITLg
-
