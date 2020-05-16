@@ -70,7 +70,7 @@ background-color:#285c4d;border-color:#285c4d}.btn-brand-alt:focus,.btn-brand-al
   color:#113128;
   letter-spacing:2px;
   background-color: #FCFCEC;
-  pointer: cursor
+  cursor: pointer
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */

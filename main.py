@@ -2,15 +2,17 @@ from flask import Flask, render_template, request, redirect
 import csv
 import requests
 import os
+from os import getcwd
 
-app = Flask(__name__, template_folder="templates", static_folder="static")
+app = Flask(__name__, template_folder="maman-menu/templates", static_folder="maman-menu/static")
 
 IMAGE_FOLDER = 'static'
 
 app.config['UPLOAD_FOLDER'] = IMAGE_FOLDER
 
 def get_dishes():
-    with open('static/example.csv', encoding='utf-16') as csvfile:
+    
+    with open(getcwd() + '/maman-rest/maman-menu/static/example.csv', encoding='utf-16') as csvfile:
         menu = csv.reader(csvfile)
         return list(menu)
 
