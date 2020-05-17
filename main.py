@@ -46,7 +46,7 @@ def rest_2():
 @app.route("/test", methods=["GET", "POST"])
 def rest_3():
     return render_template(
-        'test.html',
+        'index.html',
         data=get_dishes(),
     )
 
