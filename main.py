@@ -26,7 +26,7 @@ def get_dishes():
 @app.route("/", methods=["GET", "POST"])
 def mapview():
     return render_template(
-        'test.html',
+        'index.html',
         data=get_dishes(),
     )
 
