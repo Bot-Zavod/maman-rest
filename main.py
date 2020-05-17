@@ -22,6 +22,12 @@ def get_dishes(csv_path = 'static/example.csv'):
         menu = {key:aggregate_by_first(menu[key]) for key in menu.keys()}
         return menu
 
+@app.route("/", methods=["GET", "POST"])
+def rest_default():
+    return render_template(
+        'index.html',
+        data=get_dishes(),
+    )
 
 @app.route("/sea", methods=["GET", "POST"])
 def rest_1():
