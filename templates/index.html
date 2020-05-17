@@ -126,7 +126,7 @@ aria-selected="false">
     <div class="col-md-6">
         <section class="menu-section">
             <div class="menu-section__header">
-                <h2>For the Table{{loop.index}}</h2>
+                <h2>{{loop.index}}</h2>
             </div>
 
             <h1>{{category}}</h1>
@@ -140,7 +140,10 @@ aria-selected="false">
                 <ul>
 					{% for dish in data[category][subcategory] %}
                     <li class="menu-item">
-                        <p class="menu-item__heading">{{dish[0]}}</p>
+						<button type="button" class="collapsible">{{dish[0]}}</button>
+						<div class="content-to-collapse"> <!-- style="background-image: url('static/img/1280IMG_3338b729.jpg')"-->
+							<img src="static/img/1280IMG_3338b729.jpg">
+						</div>
                         <p>{{dish[1]}}</p>
                         <p class="menu-item__details menu-item__details--price">
                             <strong><span class="menu-item__currency">UAH</span>{{dish[2]}}
