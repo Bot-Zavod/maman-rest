@@ -1,0 +1,11 @@
+{% block content %}
+        {% for key, dvalue in data.items() %}
+            <h1>Category: {{key}}</h1>
+            {% for key, value in dvalue.items() %}
+            <h2>Subcategory: {{key}}</h2>
+                {% for el in value%}
+                <p>Dish: {{el}}</p>
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+{% endblock %}

@@ -20,16 +20,15 @@ def get_dishes():
         menu = list(csv.reader(csvfile))
         menu = aggregate_by_first(menu)
         menu = {key:aggregate_by_first(menu[key]) for key in menu.keys()}
-        print(menu)
-        # return list(menu)
+        return menu
 
 
 @app.route("/", methods=["GET", "POST"])
 def mapview():
     return render_template(
-        'index.html',
+        'test.html',
         data=get_dishes(),
     )
 
-if __name__ == "main":
+if __name__ == "__main__":
     app.run(debug=False, use_reloader=True, host= '0.0.0.0')
