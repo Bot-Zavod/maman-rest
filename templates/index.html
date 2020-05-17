@@ -13,19 +13,10 @@
 			<meta name="description" content="Colonia Verde is inspired by the hearth of Latin American fincas. We're built on the principle that food tastes better when shared for the vibrant community of Fort Greene.">
 			<link rel="icon" href="{{ url_for('static', filename='img/cv-landing-logo.png')}}">
 		<link rel="canonical" href="index.html">
-		<meta name="Revisit-After" content="5 Days">
-		<meta name="Distribution" content="Global">
-		<meta name="Rating" content="General">
-			<meta property="og:site_name" content="Colonia Verde | Latin American Restaurant & Wine Bar in Fort Greene, BK">
-			<meta property="og:title" content="Menus | Colonia Verde in Fort Greene, BK">
-			<meta property="og:type" content="article">
-			<meta property="og:url" content="index.html">
-				<meta property="og:description" content="Colonia Verde is inspired by the hearth of Latin American fincas. We're built on the principle that food tastes better when shared for the vibrant community of Fort Greene.">
-				<meta property="og:image" content="../img/19731180622_ColoniaVerde_MenuUpdate-611d2.jpg?w=1200&amp;fit=crop&amp;auto=compress,format&amp;h=600">
 		<script type="text/javascript" src="{{ url_for('static', filename='js/head.min.js')}}"></script>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 				WebFont.load({custom: { families: ["GalaxieCopernicus-Book", "Reader", "Reader", "Reader"] }});
-			</script>
+			</script> -->
 		
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
 		<script type="text/javascript">
@@ -33,7 +24,42 @@
 		</script>
 
 		<script type="text/javascript">
-				window.Sensei = { settings: { store: { enabled: false, cart_quantity: null }, gmaps: { apikey: "AIzaSyCxtTPdJqQMOwjsbKBO3adqPGzBR1MgC5g", styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#ebe7c7"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#ebe7c7"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}], icon: "https://images.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/images/45687map-pin.png", mobile_icon: "https%3A//images.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/images/45687map-pin.png%3Fw%3D50%26fit%3Dmax%26auto%3Dcompress%2Cformat" }, galleries: { autoplay: false, fade: true }, heros: { autoplay_galleries: true }, srcset_enabled: false }, modernizr: window.Modernizr };
+				window.Sensei = { settings: 
+									{ store: 
+										{ enabled: false, cart_quantity: null }, 
+									  gmaps: { apikey: "AIzaSyCxtTPdJqQMOwjsbKBO3adqPGzBR1MgC5g", 
+									  styles: [{"featureType":"water","elementType":"geometry",
+									  "stylers":[{"color":"#e9e9e9"},{"lightness":17}]},
+									  {"featureType":"landscape","elementType":"geometry",
+									  "stylers":[{"color":"#ebe7c7"},{"lightness":20}]},
+									  {"featureType":"road.highway","elementType":"geometry.fill",
+									  "stylers":[{"color":"#ffffff"},{"lightness":17}]},
+									  {"featureType":"road.highway","elementType":"geometry.stroke",
+									  "stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},
+									  {"featureType":"road.arterial","elementType":"geometry",
+									  "stylers":[{"color":"#ffffff"},{"lightness":18}]},
+									  {"featureType":"road.local","elementType":"geometry",
+									  "stylers":[{"color":"#ffffff"},{"lightness":16}]},
+									  {"featureType":"poi","elementType":"geometry",
+									  "stylers":[{"color":"#ebe7c7"},{"lightness":21}]},
+									  {"featureType":"poi.park","elementType":"geometry",
+									  "stylers":[{"color":"#dedede"},{"lightness":21}]},
+									  {"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},
+									  {"color":"#ffffff"},{"lightness":16}]},
+									  {"elementType":"labels.text.fill",
+									  "stylers":[{"color":"#333333"},{"lightness":40}]},
+									  {"elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+									  {"featureType":"transit","elementType":"geometry",
+									  "stylers":[{"color":"#f2f2f2"},{"lightness":19}]},
+									  {"featureType":"administrative","elementType":"geometry.fill",
+									  "stylers":[{"color":"#fefefe"},{"lightness":20}]},
+									  {"featureType":"administrative","elementType":"geometry.stroke",
+									  "stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}], 
+									  icon: "https://images.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/images/45687map-pin.png", 
+									  mobile_icon: "https%3A//images.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/images/45687map-pin.png%3Fw%3D50%26fit%3Dmax%26auto%3Dcompress%2Cformat" }, 
+									  galleries: { autoplay: false, fade: true }, 
+									  heros: { autoplay_galleries: true }, 
+									  srcset_enabled: false }, modernizr: window.Modernizr };
 		</script>
 
 	</head>
@@ -104,9 +130,18 @@
 									href="#{{loop.index}}"
 									role="tab"
 									aria-controls=""
-									aria-selected="true"
+									{% if loop.index == 1 %} 
+										aria-selected="true"
+									{% else %} 
+										aria-selected="false"
+									{% endif %}
 									data-order="{{loop.index}}"
-									tabindex="0">{{category}}</a>
+									{% if loop.index == 1 %} 
+										tabindex="0"
+									{% else %} 
+										tabindex="-1"
+									{% endif %}
+									>{{category}}</a>
 							</li>
 							{% endfor %}
 						</ul>
