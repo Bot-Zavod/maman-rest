@@ -25,43 +25,12 @@
 
 		<script type="text/javascript">
 				window.Sensei = { settings: 
-									{ store: 
-										{ enabled: false, cart_quantity: null }, 
-									  gmaps: { apikey: "AIzaSyCxtTPdJqQMOwjsbKBO3adqPGzBR1MgC5g", 
-									  styles: [{"featureType":"water","elementType":"geometry",
-									  "stylers":[{"color":"#e9e9e9"},{"lightness":17}]},
-									  {"featureType":"landscape","elementType":"geometry",
-									  "stylers":[{"color":"#ebe7c7"},{"lightness":20}]},
-									  {"featureType":"road.highway","elementType":"geometry.fill",
-									  "stylers":[{"color":"#ffffff"},{"lightness":17}]},
-									  {"featureType":"road.highway","elementType":"geometry.stroke",
-									  "stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},
-									  {"featureType":"road.arterial","elementType":"geometry",
-									  "stylers":[{"color":"#ffffff"},{"lightness":18}]},
-									  {"featureType":"road.local","elementType":"geometry",
-									  "stylers":[{"color":"#ffffff"},{"lightness":16}]},
-									  {"featureType":"poi","elementType":"geometry",
-									  "stylers":[{"color":"#ebe7c7"},{"lightness":21}]},
-									  {"featureType":"poi.park","elementType":"geometry",
-									  "stylers":[{"color":"#dedede"},{"lightness":21}]},
-									  {"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},
-									  {"color":"#ffffff"},{"lightness":16}]},
-									  {"elementType":"labels.text.fill",
-									  "stylers":[{"color":"#333333"},{"lightness":40}]},
-									  {"elementType":"labels.icon","stylers":[{"visibility":"off"}]},
-									  {"featureType":"transit","elementType":"geometry",
-									  "stylers":[{"color":"#f2f2f2"},{"lightness":19}]},
-									  {"featureType":"administrative","elementType":"geometry.fill",
-									  "stylers":[{"color":"#fefefe"},{"lightness":20}]},
-									  {"featureType":"administrative","elementType":"geometry.stroke",
-									  "stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}], 
-									  icon: "https://images.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/images/45687map-pin.png", 
-									  mobile_icon: "https%3A//images.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/images/45687map-pin.png%3Fw%3D50%26fit%3Dmax%26auto%3Dcompress%2Cformat" }, 
+									{ store: { enabled: false, cart_quantity: null }, 
 									  galleries: { autoplay: false, fade: true }, 
 									  heros: { autoplay_galleries: true }, 
-									  srcset_enabled: false }, modernizr: window.Modernizr };
+									  srcset_enabled: false }, 
+								  modernizr: window.Modernizr };
 		</script>
-
 	</head>
 	
     <body class="has-hero-intent has-hospitality has-mobi-footer menus-template has-nav-address-bar">
@@ -122,27 +91,39 @@
 
 				<section id="menus" class="content revealable">
 					<div class="tabs">
+						<h1>{{ data.keys()|length }}</h1>
 						<ul class="tabs-nav" role="tablist">
 							{% for category in data.keys() %}
-							<li role="presentation">
-								<a id="tab-{{loop.index}}"
-									class="btn btn-tabs active"
-									href="#{{loop.index}}"
-									role="tab"
-									aria-controls=""
-									{% if loop.index == 1 %} 
-										aria-selected="true"
-									{% else %} 
-										aria-selected="false"
-									{% endif %}
-									data-order="{{loop.index}}"
-									{% if loop.index == 1 %} 
-										tabindex="0"
-									{% else %} 
-										tabindex="-1"
-									{% endif %}
-									>{{category}}</a>
-							</li>
+								<li role="presentation">
+									<a id="tab-{{loop.index}}"
+
+										{% if loop.index == 1 %} 
+											class="btn btn-tabs active"
+										{% else %} 
+											class="btn btn-tabs"
+										{% endif %}
+
+										href="#{{loop.index}}"
+										role="tab"
+										aria-controls=""
+
+										{% if loop.index == 1 %} 
+											aria-selected="true"
+										{% else %} 
+											aria-selected="false"
+										{% endif %}
+
+										data-order="{{loop.index}}"
+
+										{% if loop.index == 1 %} 
+											tabindex="0"
+										{% else %} 
+											tabindex="-1"
+										{% endif %}
+										>
+										{{category}}
+									</a>
+								</li>
 							{% endfor %}
 						</ul>
 						
@@ -150,49 +131,59 @@
 
 							
 {% for category in data.keys() %}
-<section id="{{loop.index}}"
-class="tabs-panel tabs-panel--active tabs-panel--show"
-role="tabpanel"
-aria-labelledby="tab-{{loop.index}}"
-aria-selected="false">	
+	<section id="{{loop.index}}"
+	{% if loop.index == 1 %} 
+		class="tabs-panel tabs-panel--active tabs-panel--show"
+	{% else %} 
+		class="tabs-panel"
+	{% endif %}
+	
+	role="tabpanel"
+	aria-labelledby="tab-{{loop.index}}"
+	{% if loop.index == 1 %} 
+		aria-selected="true"
+	{% else %} 
+		aria-selected="false"
+	{% endif %}
+	>	
 
-<div class="container">
-<div class="row">
-    <div class="col-md-6">
-        <section class="menu-section">
-            <div class="menu-section__header_2">
-                <h2>{{loop.index}}</h2>
-            </div>
-
-            <h1>{{category}}</h1>
-        </section>
-		{% for subcategory in data[category].keys() %}
-        <section class="menu-section">
-                <div class="menu-section__header">
-                    <h2>{{subcategory}}</h2>
-                </div>
-
-                <ul>
-					{% for dish in data[category][subcategory] %}
-                    <li class="menu-item">
-						<button type="button" class="collapsible">{{dish[0]}}</button>
-						<div class="content-to-collapse"> <!-- style="background-image: url('static/img/1280IMG_3338b729.jpg')"-->
-							<img src="static/img/1280IMG_3338b729.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<!-- <section class="menu-section">
+						<div class="menu-section__header_2">
+							<h2>{{loop.index}}</h2>
 						</div>
-                        <p>{{dish[1]}}</p>
-                        <p class="menu-item__details menu-item__details--price">
-                            <strong><span class="menu-item__currency">UAH</span>{{dish[2]}}
-                            </strong>
-                        </p>
-					</li>
-					{% endfor %}
-                </ul>
-        </section>
-		{% endfor%}
-    </div>
-</div>
-</div>
-</section>
+						<h1>{{category}}</h1>
+					</section> -->
+					{% for subcategory in data[category].keys() %}
+						<section class="menu-section">
+							<div class="menu-section__header">
+								<h2>{{subcategory}}</h2>
+							</div>
+
+							<ul>
+								{% for dish in data[category][subcategory] %}
+									<li class="menu-item">
+										<button type="button" class="collapsible">{{dish[0]}}</button>
+										<div class="content-to-collapse"> <!-- style="background-image: url('static/img/1280IMG_3338b729.jpg')"-->
+											<img src="static/img/1280IMG_3338b729.jpg">
+										</div>
+										<p>{{dish[1]}}</p>
+										<p class="menu-item__details menu-item__details--price">
+											<strong>
+												<span class="menu-item__currency">UAH</span>{{dish[2]}}
+											</strong>
+										</p>
+									</li>
+								{% endfor %}
+							</ul>
+						</section>
+					{% endfor%}
+				</div>
+			</div>
+		</div>
+	</section>
 {% endfor %}
 
 						</div>
