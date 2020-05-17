@@ -1,23 +1,23 @@
 ﻿@font-face {
-  font-family: "GalaxieCopernicus-Book";
-  src: url("http://media-cdn.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/ff4CivgmRKKTq8ydfI6a_GalaxieCopernicus-Book.otf") format("opentype")
+  font-family: "DomCasual"; /* GalaxieCopernicus-Book */
+  src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/DOMCASL.TTF") format("opentype")
 }
 
 @font-face {
-  font-family: "Reader";
-  src: url("http://media-cdn.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/o8ZMUAuBQN2WuZ1ZpZJB_Reader-Regular.otf") format("opentype");
+  font-family: "Globus";
+  src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("opentype");
   font-weight: 400
 }
 
 @font-face {
-  font-family: "Reader";
-  src: url("http://media-cdn.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/aPBDyEfGTXSeAjmCjw15_Reader-Bold.otf") format("opentype");
+  font-family: "DomCasual";
+  src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/DOMCASL.TTF") format("opentype");
   font-weight: 700
 }
 
 @font-face {
-  font-family: "Reader";
-  src: url("http://media-cdn.getbento.com/accounts/b364399694ba06197e9f6c7181cb6ed0/media/AH7eR9YgTsy9FWso5nMf_Regular-Extrabold.otf") format("opentype");
+  font-family: "DomCasual";
+  src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/DOMCASL.TTF") format("opentype");
   font-weight: 900
 }
 
@@ -1665,7 +1665,7 @@ html {
 }
 
 body {
-  font-family: "GalaxieCopernicus-Book";
+  font-family: "DomCasual";
   font-size: 1rem;
   line-height: 1.5;
   color: #285c4d;
@@ -1857,7 +1857,7 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 1rem;
-  font-family: "Reader";
+  font-family: "DomCasual";
   font-weight: 500;
   line-height: 1.1;
   color: inherit
@@ -4904,9 +4904,9 @@ a.text-danger:hover {
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 @font-face {
-  font-family: 'FontAwesome';
-  src: url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/font-awesome/fontawesome-webfont.eot?v=4.6.3");
-  src: url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/font-awesome/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/font-awesome/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/font-awesome/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/font-awesome/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+  font-family: 'FontAwesome'; /* Globus */
+  src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf");
+  src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("embedded-opentype"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("woff2"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("woff"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("truetype"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("svg");
   font-weight: normal;
   font-style: normal
 }
@@ -7876,9 +7876,9 @@ a.text-danger:hover {
 }
 
 @font-face {
-  font-family: "slick";
-  src: url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/slick-carousel/slick.eot");
-  src: url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/slick-carousel/slick.eot?#iefix") format("embedded-opentype"), url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/slick-carousel/slick.woff") format("woff"), url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/slick-carousel/slick.ttf") format("truetype"), url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/fonts/slick-carousel/slick.svg#slick") format("svg");
+  font-family: "slick"; /* Epsilon CTT */
+  src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF");
+  src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF") format("embedded-opentype"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF") format("woff"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF") format("truetype"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF") format("svg");
   font-weight: normal;
   font-style: normal
 }
@@ -8641,7 +8641,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Reader";
+  font-family: "DomCasual";
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase
@@ -8657,7 +8657,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: "Reader";
+  font-family: "DomCasual";
   color: #285c4d;
   font-weight: 900;
   text-transform: uppercase;
@@ -8666,7 +8666,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: "Reader";
+  font-family: "DomCasual";
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px
@@ -8800,7 +8800,7 @@ a.btn[disabled] {
 }
 
 .btn-brand {
-  font-family: "Reader";
+  font-family: "DomCasual";
   color: #000;
   background-color: #ff8674;
   border-color: #ff8674
@@ -8857,7 +8857,7 @@ a.btn[disabled] {
 }
 
 .btn-brand-inverted {
-  font-family: "Reader";
+  font-family: "DomCasual";
   color: #ff8674;
   background-color: #000;
   border-color: #ff8674
@@ -8914,7 +8914,7 @@ a.btn[disabled] {
 }
 
 .btn-brand-alt {
-  font-family: "Reader";
+  font-family: "DomCasual";
   color: #000;
   background-color: #fff;
   border-color: #fff
@@ -8971,7 +8971,7 @@ a.btn[disabled] {
 }
 
 .btn-tabs {
-  font-family: "Reader";
+  font-family: "DomCasual";
   color: #1b3d34;
   background-color: #fbb255;
   border-color: #fbb255
@@ -9028,7 +9028,7 @@ a.btn[disabled] {
 }
 
 .btn-cart {
-  font-family: "Reader";
+  font-family: "DomCasual";
   font-size: .75rem;
   text-transform: none;
   padding: 0.3em 1.1em;
@@ -10179,7 +10179,7 @@ select {
 
 .site-footer-desktop-primary .site-nav {
   display: block;
-  font-family: "Reader";
+  font-family: "DomCasual";
   font-weight: 900;
   font-size: 1rem;
   text-transform: uppercase;
@@ -10641,7 +10641,7 @@ select {
 }
 
 .site-wordmark__btn {
-  font-family: "GalaxieCopernicus-Book";
+  font-family: "DomCasual";
   font-size: 1.75rem;
   line-height: 1.5;
   color: #285c4d;
@@ -10819,7 +10819,7 @@ select {
 }
 
 .site-nav {
-  font-family: "Reader";
+  font-family: "DomCasual";
   font-weight: 900;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -11894,7 +11894,7 @@ ul.card-listing {
 }
 
 .card__subheading {
-  font-family: "GalaxieCopernicus-Book";
+  font-family: "DomCasual";
   font-size: 1rem
 }
 
@@ -12078,7 +12078,7 @@ ul.card-listing {
 }
 
 .menu-item__heading {
-  font-family: "GalaxieCopernicus-Book";
+  font-family: "FontAwesome";
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -13539,7 +13539,7 @@ h2.h2.c-split__heading {
 }
 
 p.menu-item__heading {
-  font-family: "Reader";
+  font-family: "DomCasual";
   font-weight: 900;
   font-size: 1rem;
   color: #113128;
@@ -13633,7 +13633,7 @@ h1:last-child {
 }
 
 .site-wordmark__btn {
-  font-family: "Reader";
+  font-family: "DomCasual";
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 900;
@@ -14013,7 +14013,7 @@ _:future,
 .collapsible {
   border: none;
   padding: 0;
-  font-family: "Reader";
+  font-family: "FontAwesome";
   font-weight: 900;
   font-size: 1.2rem;
   color: #113128;

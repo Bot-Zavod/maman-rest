@@ -16,9 +16,9 @@ def aggregate_by_first(input_list):
     return categ_dict
 
 def get_dishes():
-    with open('static/example.csv', encoding='utf-16') as csvfile:
+    with open('maman-rest/static/example.csv', encoding='utf-16') as csvfile:
         menu = list(csv.reader(csvfile))
-        menu = aggregate_by_first(menu)
+        menu = aggregate_by_first(menu[1:])
         menu = {key:aggregate_by_first(menu[key]) for key in menu.keys()}
         return menu
 
