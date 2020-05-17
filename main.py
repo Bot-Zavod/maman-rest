@@ -15,18 +15,38 @@ def aggregate_by_first(input_list):
     categ_dict = {key:[el[1:] for el in categ_dict[key]] for key in categ_dict.keys()}
     return categ_dict
 
-def get_dishes():
-    with open('maman-rest/static/example.csv', encoding='utf-16') as csvfile:
+def get_dishes(csv_path = 'static/example.csv'):
+    with open(csv_path, encoding='utf-16') as csvfile:
         menu = list(csv.reader(csvfile))
         menu = aggregate_by_first(menu[1:])
         menu = {key:aggregate_by_first(menu[key]) for key in menu.keys()}
         return menu
 
-
 @app.route("/", methods=["GET", "POST"])
-def mapview():
+def rest_default():
     return render_template(
         'index.html',
+        data=get_dishes(),
+    )
+
+@app.route("/sea", methods=["GET", "POST"])
+def rest_1():
+    return render_template(
+        'index.html',
+        data=get_dishes(),
+    )
+
+@app.route("/fontan", methods=["GET", "POST"])
+def rest_2():
+    return render_template(
+        'index.html',
+        data=get_dishes(),
+    )
+
+@app.route("/test", methods=["GET", "POST"])
+def rest_3():
+    return render_template(
+        'test.html',
         data=get_dishes(),
     )
 
