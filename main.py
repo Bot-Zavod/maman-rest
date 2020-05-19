@@ -15,7 +15,7 @@ def aggregate_by_first(input_list):
     categ_dict = {key:[el[1:] for el in categ_dict[key]] for key in categ_dict.keys()}
     return categ_dict
 
-def get_dishes(csv_path = 'static/example.csv'):
+def get_dishes(csv_path = 'maman-rest/static/example.csv'):
     with open(csv_path, encoding='utf-16') as csvfile:
         menu = list(csv.reader(csvfile))
         menu = aggregate_by_first(menu[1:])
@@ -26,28 +26,28 @@ def get_dishes(csv_path = 'static/example.csv'):
 def rest_default():
     return render_template(
         'index.html',
-        data=get_dishes(),
+        data=get_dishes(), page_type="sea"
     )
 
 @app.route("/sea", methods=["GET", "POST"])
 def rest_1():
     return render_template(
         'index.html',
-        data=get_dishes(),
+        data=get_dishes(), page_type="sea"
     )
 
 @app.route("/fontan", methods=["GET", "POST"])
 def rest_2():
     return render_template(
         'index.html',
-        data=get_dishes(),
+        data=get_dishes(), page_type="fontan"
     )
 
 @app.route("/test", methods=["GET", "POST"])
 def rest_3():
     return render_template(
         'index.html',
-        data=get_dishes(),
+        data=get_dishes(), page_type="center"
     )
 
 if __name__ == "__main__":
