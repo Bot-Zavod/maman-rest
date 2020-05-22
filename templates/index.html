@@ -179,7 +179,7 @@
 					<div class="tabs">
 						<!--<h1>{{ data.keys()|length }}</h1>-->
 						<ul class="tabs-nav" role="tablist"  onclick="smoothScroll(document.getElementById('scroll-here'))">
-							{% for category in data.keys() %}
+							{% for category in btn_order %}
 								<li role="presentation">
 									<a id="tab-{{loop.index}}"
 
@@ -217,7 +217,7 @@
 <div class="tabs-content"  id="scroll-here">
 
 							
-{% for category in data.keys() %}
+{% for category in btn_order %}
 	<section id="{{loop.index}}"
 	{% if loop.index == 1 %} 
 		class="tabs-panel tabs-panel--active tabs-panel--show"
