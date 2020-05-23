@@ -12,9 +12,17 @@ IMAGE_FOLDER = 'static'
 
 app.config['UPLOAD_FOLDER'] = IMAGE_FOLDER
 
-categories = {'center': ['Завтраки', 'Raw bar', 'Брускетты', 'Закуски', 'Салаты', 'Рыба и морепродукты', 'Мясо и стейки', 'Горячие блюда', 'Супы', 'Котлетки', 'Паста и тесто', 'Десерты', 'Бар'],
-              'fontan': ['Завтраки', 'Закуски', 'Салаты', 'Raw bar', 'Брускетты', 'Паста и пицца', 'Рыба и морепродукты', 'Мясо и стейки', 'Горячие блюда', 'Котлетки', 'Десерты', 'Бар'],
-              'sea': ['Raw bar', 'Роллы', 'Брускетты', 'Закуски', 'Салаты', 'Супы', 'Рыба и морепродукты', 'Мясо и стейки', 'Горячее', 'Паста', 'Десерты', 'Бар']
+categories = {'center': ['Завтраки', 'Raw bar', 'Брускетты', 'Закуски', 'Салаты',
+                         'Рыба и морепродукты', 'Мясо и стейки', 'Горячие блюда',
+                         'Супы', 'Котлетки', 'Паста и тесто', 'Десерты', 'Бар'],
+
+              'fontan': ['Завтраки', 'Закуски', 'Салаты', 'Супы', 'Raw bar', 'Брускетты',
+                         'Паста и пицца', 'Рыба и морепродукты', 'Мясо и стейки',
+                         'Горячие блюда', 'Котлетки', 'Десерты', 'Бар'],
+
+              'sea':    ['Raw bar', 'Роллы', 'Брускетты', 'Закуски', 'Салаты',
+                         'Супы', 'Рыба и морепродукты', 'Мясо и стейки', 
+                         'Горячее', 'Паста и тесто', 'Десерты', 'Бар']
               }
 
 
@@ -27,7 +35,12 @@ def aggregate_by_first(input_list):
     return categ_dict
 
 
-def get_dishes(csv_path='static/maman_fontan.csv', categories=None):
+def get_dishes(rest_type, categories=None):
+    paths = {'center': 'maman_center',
+             'fontan': 'maman_fontan',
+             'sea': 'maman_sea'}
+             
+    csv_path = 'static/csv/' + paths[rest_type] + ".csv"
     with codecs.open(filename=csv_path, mode='r', encoding='utf-8') as csvfile:
         menu = list(csv.reader(csvfile))
         menu = aggregate_by_first(menu[1:])
@@ -37,7 +50,7 @@ def get_dishes(csv_path='static/maman_fontan.csv', categories=None):
 
 @app.route("/sea", methods=["GET", "POST"])
 def rest_1():
-    dishes = get_dishes()
+    dishes = get_dishes('sea')
     buttons = list(filter(lambda x: x in dishes.keys(), categories['sea']))
     return render_template(
         'index.html',
@@ -47,7 +60,7 @@ def rest_1():
 
 @app.route("/fontan", methods=["GET", "POST"])
 def rest_2():
-    dishes = get_dishes('static/maman_fontan.csv')
+    dishes = get_dishes('fontan')
     buttons = list(filter(lambda x: x in dishes.keys(), categories['fontan']))
     return render_template(
         'index.html',
@@ -55,9 +68,9 @@ def rest_2():
     )
 
 
-@app.route("/test", methods=["GET", "POST"])
+@app.route("/center", methods=["GET", "POST"])
 def rest_3():
-    dishes = get_dishes()
+    dishes = get_dishes('center')
     buttons = list(filter(lambda x: x in dishes.keys(), categories['center']))
     return render_template(
         'index.html',

@@ -1,25 +1,14 @@
 ﻿@font-face {
-    font-family: "DomCasual";
-    /* GalaxieCopernicus-Book */
-    src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/DOMCASL.TTF") format("opentype")
-}
-
-@font-face {
-    font-family: "Globus";
-    src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("opentype");
-    font-weight: 400
-}
-
-@font-face {
-    font-family: "DomCasual";
-    src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/DOMCASL.TTF") format("opentype");
+    font-family: "Roboto";
+    /* Roboto bold 700 */
+    src: url("https://fonts.googleapis.com/css2?family=Roboto") format("embedded-opentype");
     font-weight: 700
 }
 
 @font-face {
-    font-family: "DomCasual";
-    src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/DOMCASL.TTF") format("opentype");
-    font-weight: 900
+    font-family: "Oswald";
+    src: url("https://fonts.googleapis.com/css2?family=Oswald") format("embedded-opentype");
+    font-weight: 500
 }
 
 a:focus,
@@ -1654,7 +1643,7 @@ html {
 }
 
 body {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-size: 1rem;
     line-height: 1.5;
     color: #285c4d;
@@ -1846,7 +1835,7 @@ h6,
 .h5,
 .h6 {
     margin-bottom: 1rem;
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-weight: 500;
     line-height: 1.1;
     color: inherit
@@ -4658,9 +4647,9 @@ a.text-danger:hover {
 
 @font-face {
     font-family: 'FontAwesome';
-    /* Globus */
-    src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf");
-    src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("embedded-opentype"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("woff2"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("woff"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("truetype"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("svg");
+    /* Noto Serif */
+    src: url("https://fonts.googleapis.com/css2?family=Noto+Serif");
+    src: url("https://fonts.googleapis.com/css2?family=Noto+Serif") format("embedded-opentype"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("woff2"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/Globus.ttf") format("woff"), url("https://fonts.googleapis.com/css2?family=Noto+Serif") format("truetype"), url("https://fonts.googleapis.com/css2?family=Noto+Serif") format("svg");
     font-weight: normal;
     font-style: normal
 }
@@ -7623,15 +7612,11 @@ a.text-danger:hover {
     display: none
 }
 
-.slick-loading .slick-list {
-    background: #fff url("https://theme-assets.getbento.com/sensei/361b666.sensei/assets/images/slick-carousel/ajax-loader.gif") center center no-repeat
-}
-
 @font-face {
-    font-family: "slick";
-    /* Epsilon CTT */
-    src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF");
-    src: url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF") format("embedded-opentype"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF") format("woff"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF") format("truetype"), url("https://bayguzin.ru/assets/images/2015/07/rus_eng_shrift/EPSIL_C.TTF") format("svg");
+    font-family: "PT Serif";
+    /* slick font */
+    src: url("https://fonts.googleapis.com/css2?family=PT+Serif");
+    src: url("https://fonts.googleapis.com/css2?family=PT+Serif") format("embedded-opentype"), url("https://fonts.googleapis.com/css2?family=PT+Serif") format("woff"), url("https://fonts.googleapis.com/css2?family=PT+Serif") format("truetype"), url("https://fonts.googleapis.com/css2?family=PT+Serif") format("svg");
     font-weight: normal;
     font-style: normal
 }
@@ -7679,7 +7664,7 @@ a.text-danger:hover {
 
 .slick-prev:before,
 .slick-next:before {
-    font-family: "slick";
+    font-family: "PT Serif";
     font-size: 20px;
     line-height: 1;
     color: #fff;
@@ -7778,7 +7763,7 @@ a.text-danger:hover {
     content: "•";
     width: 20px;
     height: 20px;
-    font-family: "slick";
+    font-family: "PT Serif";
     font-size: 6px;
     line-height: 20px;
     text-align: center;
@@ -8322,7 +8307,6 @@ body {
     font-weight: 300;
     background-repeat: repeat;
     background-position: top left;
-    background-image: url("https://images.getbento.com/")
 }
 
 body.is-boxed {
@@ -8386,7 +8370,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-weight: 500;
     font-style: normal;
     text-transform: uppercase
@@ -8402,7 +8386,7 @@ h1,
 
 h2,
 .h2 {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     color: #285c4d;
     font-weight: 900;
     text-transform: uppercase;
@@ -8411,7 +8395,7 @@ h2,
 
 h3,
 .h3 {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px
@@ -8545,7 +8529,7 @@ a.btn[disabled] {
 }
 
 .btn-brand {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     color: #000;
     background-color: #ff8674;
     border-color: #ff8674
@@ -8602,7 +8586,7 @@ a.btn[disabled] {
 }
 
 .btn-brand-inverted {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     color: #ff8674;
     background-color: #000;
     border-color: #ff8674
@@ -8659,7 +8643,7 @@ a.btn[disabled] {
 }
 
 .btn-brand-alt {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     color: #000;
     background-color: #fff;
     border-color: #fff
@@ -8716,7 +8700,7 @@ a.btn[disabled] {
 }
 
 .btn-tabs {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     color: #1b3d34;
     background-color: #fbb255;
     border-color: #fbb255
@@ -8773,7 +8757,7 @@ a.btn[disabled] {
 }
 
 .btn-cart {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-size: .75rem;
     text-transform: none;
     padding: 0.3em 1.1em;
@@ -9921,7 +9905,7 @@ select {
 
 .site-footer-desktop-primary .site-nav {
     display: block;
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-weight: 900;
     font-size: 1rem;
     text-transform: uppercase;
@@ -10372,7 +10356,7 @@ select {
 }
 
 .site-wordmark__btn {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-size: 1.75rem;
     line-height: 1.5;
     color: #285c4d;
@@ -10548,7 +10532,7 @@ select {
 }
 
 .site-nav {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-weight: 900;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -11152,7 +11136,7 @@ select {
 .content {
     text-align: center;
     padding-top: 5rem;
-    padding-bottom: 4.5rem
+    /* padding-bottom: 4.5rem */
 }
 
 .content+.content {
@@ -11605,7 +11589,7 @@ ul.card-listing {
 }
 
 .card__subheading {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-size: 1rem
 }
 
@@ -11782,11 +11766,12 @@ ul.card-listing {
 }
 
 .menu-item {
-    margin-bottom: 2.5rem
+    margin-bottom: 2.5rem;
+    font-family: "Oswald";
 }
 
 .menu-item__heading {
-    font-family: "FontAwesome";
+    font-family: "Oswald";
     font-size: 1.25rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -12058,7 +12043,7 @@ ul.slick-track {
     width: 100%;
     position: relative;
     z-index: 0;
-    background-color: #285c4d
+    background-color: #fffded
 }
 
 .gallery__item {
@@ -12947,7 +12932,6 @@ ul.slick-track {
     background-color: #fffded;
     background-repeat: repeat;
     background-position: top left;
-    background-image: url("https://images.getbento.com/")
 }
 
 .has-mobi-footer .site-content:after {
@@ -13225,7 +13209,7 @@ h2.h2.c-split__heading {
 }
 
 p.menu-item__heading {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-weight: 900;
     font-size: 1rem;
     color: #113128;
@@ -13246,7 +13230,7 @@ section#dinner .menu-section {
 
 section#intro {
     max-width: 900px;
-    padding-top: 4rem
+    padding-top: 1rem
 }
 
 .c-intro h1:after,
@@ -13319,7 +13303,7 @@ h1:last-child {
 }
 
 .site-wordmark__btn {
-    font-family: "DomCasual";
+    font-family: "Roboto";
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 900;
@@ -13655,10 +13639,11 @@ _:future,
 
 /* Style the button that is used to open and close the collapsible content */
 
-.collapsible {
+
+/*.collapsible {
     border: 1px;
     padding: 0;
-    font-family: "FontAwesome";
+    font-family: "Roboto";
     font-weight: 900;
     font-size: 1.2rem;
     color: #113128;
@@ -13666,26 +13651,41 @@ _:future,
     background-color: #FCFCEC;
     cursor: pointer;
     text-align: left
-}
+}*/
 
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
 .active,
-.menu-item:hover {
+.collapsible:hover {
     background-color: #98c0a2;
-    color: white
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
+
+
+/*.disactive,
+.collapsible:hover {
+    background-color: #f1f1f1;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}*
 
 
 /* Style the collapsible content. Note: hidden by default */
 
 .content-to-collapse {
-    width: 15rem;
-    height: 15rem;
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 100%;
+    /*width: 15rem;
+    height: 15rem;*/
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
+    margin-bottom: 1rem;
 }
 
 .menu-section__header_2 h2 {
@@ -13700,9 +13700,10 @@ _:future,
 .non-collapsible {
     border: none;
     padding: 0;
-    font-family: "FontAwesome";
-    font-weight: 900;
-    font-size: 1.2rem;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
     color: #113128;
     letter-spacing: 2px;
     cursor: pointer;
@@ -13718,5 +13719,17 @@ _:future,
 }
 
 .tabs-content {
+    width: auto;
+    border-top: 5px solid #98c0a2;
     padding-top: 100px;
 }
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+;
