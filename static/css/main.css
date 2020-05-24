@@ -11768,6 +11768,7 @@ ul.card-listing {
 .menu-item {
     margin-bottom: 2.5rem;
     font-family: "Oswald";
+    padding: auto;
 }
 
 .menu-item__heading {
@@ -13199,7 +13200,8 @@ h2.h2.c-split__heading {
     writing-mode: vertical-lr;
     -webkit-text-orientation: sideways-right;
     display: inline-flex;
-    margin-left: -5.2rem;
+    margin-left: -5rem;
+    /* - */
     position: absolute;
     transform: rotate(180deg)
 }
@@ -13660,8 +13662,9 @@ _:future,
 .collapsible:hover {
     background-color: #98c0a2;
     color: white;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
+    /* padding-bottom: 30px; */
 }
 
 
@@ -13686,20 +13689,22 @@ _:future,
     overflow: hidden;
     background-color: #f1f1f1;
     margin-bottom: 1rem;
+    margin-top: 1.9rem;
 }
 
 .menu-section__header_2 h2 {
     writing-mode: vertical-lr;
     -webkit-text-orientation: sideways-right;
     display: inline-flex;
-    margin-left: -5.2rem;
+    margin-left: auto;
+    /* -5.2rem */
     position: absolute;
     transform: rotate(-90deg)
 }
 
 .non-collapsible {
     border: none;
-    padding: 0;
+    padding: auto;
     font-family: "Roboto";
     text-transform: uppercase;
     font-weight: 600;
@@ -13720,8 +13725,7 @@ _:future,
 
 .tabs-content {
     width: auto;
-    border-top: 5px solid #98c0a2;
-    padding-top: 100px;
+    /* border-top: 5px solid #98c0a2; */
 }
 
 .alignleft {
@@ -13732,4 +13736,33 @@ _:future,
     float: right;
 }
 
-;
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    left: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #98c0a2;
+    /* Set a background color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    border-radius: 50%;
+    /* Rounded corners */
+    width: 50px;
+    height: 50px;
+    opacity: 0.7;
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}

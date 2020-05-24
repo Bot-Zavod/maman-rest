@@ -25,7 +25,7 @@
     </script>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script type="text/javascript">
         Modernizr.addTest("maybemobile", function() {
@@ -152,6 +152,9 @@
     </header>
 
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <img src="/static/img/angle-double-up-solid.svg" width="25px" height="25px">
+    </button>
 
     <div class="site-content">
         <main class="site-content__main">
@@ -258,34 +261,40 @@
 
                                             <ul>
                                                 {% for dish in data[category][subcategory] %}
-                                                   {% if dish[3] %} 
-                                                        <li class="menu-item collapsible">
-                                                    {% else %}
-                                                        <li class="menu-item">
-                                                    {% endif %}  
-                                                            <!-- dish name -->
-                                                            <p class="non-collapsible">{{dish[0]}}</p>
-                                                            <!-- description-->
+                                                    <li class="menu-item {% if dish[4] %} collapsible {% endif %}" 
+                                                                         {% if dish[4] %} style="padding-bottom: 30px"{% endif %}>
+                                                        <!-- dish name -->
+                                                        <p class="non-collapsible">{{dish[0]}}</p>
+                                                        <!-- description-->
+                                                        {% if dish[1] %}
                                                             <p>{{dish[1]}}</p>
-                                                            <!-- price-->                                                              
-                                                                                                                                        
-                                                            <p class="menu-item__details menu-item__details--price">
+                                                        {% endif %}
+
+                                                        <!--weight & price-->
+                                                        
+                                                        <p class="menu-item__details menu-item__details--price alignleft">
+                                                            <strong>
+                                                                {{dish[3]}}
+                                                                <span class="menu-item__currency">грн</span>
+                                                            </strong>
+                                                        </p>
+                                                        {% if dish[2] %}
+                                                            <p class="alignright">
+                                                                <strong>{{dish[2]}}</strong>
+                                                            </p>
+                                                        {% endif %}
+                                                        <div style="clear: both;"></div>
+                                                        {% if dish[4] %}
+                                                            <p class="alignright">
                                                                 <strong>
-                                                                    {{dish[2]}}<span class="menu-item__currency">грн</span>
+                                                                    ФОТО
                                                                 </strong>
                                                             </p>
-                                                            {% if dish[3] %}
-                                                                <p class="alignright">
-                                                                    <strong>
-                                                                        ФОТО
-                                                                    </strong>
-                                                                </p>
-                                                            {% endif %}
-                                                            <div style="clear: both;"></div>
-                                                            </li>
-                                                    {% if dish[3] %} 
+                                                        {% endif %}
+                                                    </li>
+                                                    {% if dish[4] %} 
                                                         <div class="content-to-collapse">
-                                                            <img src="static/img/dishes/{{dish[3]}}">
+                                                            <img src="static/img/dishes/{{dish[4]}}">
                                                         </div>
                                                     {% endif %}
                                                 {% endfor %}
@@ -304,9 +313,12 @@
 
         </main>
     </div>
-
+    
     <script type="text/javascript" src="{{ url_for('static', filename='js/foot.libs.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/maman.min.js') }}"></script>
-</body>
 
+    <script type="text/javascript" src="{{ url_for('static', filename='js/maman.min.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/nash.js') }}"></script>
+    
+</body>
 </html>
