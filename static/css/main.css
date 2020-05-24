@@ -13658,23 +13658,20 @@ _:future,
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
-.active,
-.collapsible:hover {
+.active {
     background-color: #98c0a2;
     color: white;
-    padding: 20px;
+    padding: 5px;
     border-radius: 5px;
-    /* padding-bottom: 30px; */
 }
 
 
-/*.disactive,
-.collapsible:hover {
+/*.disactive {
     background-color: #f1f1f1;
     color: black;
     padding: 10px;
     border-radius: 5px;
-}*
+}*/
 
 
 /* Style the collapsible content. Note: hidden by default */
@@ -13684,12 +13681,13 @@ _:future,
     max-width: 100%;
     max-height: 100%;
     /*width: 15rem;
-    height: 15rem;*/
-    display: none;
+    height: 15rem;
+    display: none;*/
     overflow: hidden;
     background-color: #f1f1f1;
     margin-bottom: 1rem;
     margin-top: 1.9rem;
+    transition: max-height 0.2s ease-out;
 }
 
 .menu-section__header_2 h2 {
